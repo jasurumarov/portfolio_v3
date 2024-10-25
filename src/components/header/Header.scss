@@ -1,0 +1,20 @@
+.header__navlink.active {
+    background: #f0f2f5;
+    color: #1a1f2c;
+
+    svg {
+        color: #1a1f2c;
+    }
+}
+
+.dark {
+    .header__navlink.active {
+        background: #0e1018;
+        color: white;
+
+        svg {
+            color: white;
+        }
+    }
+
+}

@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'bricolage2';
+    src: url('./assets/fonts/BricolageGrotesque-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: 'bricolage3';
+    src: url('./assets/fonts/BricolageGrotesque-Light.ttf');
+}
+
+@font-face {
+    font-family: 'bricolage';
+    src: url('./assets/fonts/BricolageGrotesque-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'bricolage5';
+    src: url('./assets/fonts/BricolageGrotesque-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'bricolage6';
+    src: url('./assets/fonts/BricolageGrotesque-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'bricolage7';
+    src: url('./assets/fonts/BricolageGrotesque-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'bricolage8';
+    src: url('./assets/fonts/BricolageGrotesque-ExtraBold.ttf');
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+input {
+    border: 0;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.two-line {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
