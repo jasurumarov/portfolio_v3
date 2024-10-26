@@ -4,22 +4,26 @@ import './index.css'
 
 // Pages
 import Home from './pages/home/Home'
+import Projects from './pages/projects/Projects'
+import Blog from './pages/blog/Blog'
+import Contact from './pages/contact/Contact'
 
 // Components
 import Header from './components/header/Header'
-import Projects from './pages/projects/Projects'
 import Background from './components/background/Background'
 
 
 function App() {
 	return (
-		<div className=' h-screen overflow-y-auto overflow-x-hidden bg-light text-dark dark:bg-dark-2 dark:text-light'>
-			<div className='mx-auto flex max-w-screen-2xl flex-col justify-between gap-4 p-4 lg:gap-6 lg:p-6'>
+		<div className='relative h-screen overflow-y-auto overflow-x-hidden bg-light text-dark dark:bg-dark-2 dark:text-light'>
+			<div className='sticky z-50 mx-auto flex max-w-screen-2xl flex-col justify-between gap-4 p-4 lg:gap-6 lg:p-6'>
 				<Header />
 
 				<Routes>
-					{/* <Route path='/' element={<Home />} /> */}
-					{/* <Route path='/projects' element={<Projects />} /> */}
+					<Route path='/' element={<Home />} />
+					<Route path='/projects' element={<Projects />} />
+					<Route path='/blog' element={<Blog />} />
+					<Route path='/contact' element={<Contact />} />
 				</Routes>
 
 			</div>

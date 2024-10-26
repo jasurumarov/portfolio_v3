@@ -1,0 +1,17 @@
+@keyframes scrollY {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+.animate-scrollY {
+    animation: scrollY 5s linear infinite;
+}
+
+.group:hover .animate-scrollY {
+    animation-play-state: paused;
+}

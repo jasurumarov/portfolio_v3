@@ -30,7 +30,7 @@ const Background = () => {
 
     return (
         <div className="shapes">
-            <div className="fixed -left-1/2 -top-1/2  animate-spin-very-slow xl:-left-[20%] xl:-top-1/3">
+            <div className="fixed -left-1/2 -top-1/2 animate-spin-very-slow xl:-left-[20%] xl:-top-1/3">
                 <img src={img1} alt="Gradient 1" className="" />
             </div>
 
