@@ -41,7 +41,7 @@ const HomeProjects = () => {
                             <img
                                 src={image}
                                 alt={`project-${index}`}
-                                className="max-h-[208px] w-full rounded-t-lg object-cover object-top transition cursor-pointer"
+                                className="lg:max-h-[208px] w-full rounded-t-lg object-cover object-top transition cursor-pointer"
                             />
 
                             {/* The button that opens the lightbox */}

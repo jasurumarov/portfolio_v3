@@ -27,7 +27,7 @@ const servicesData = [
     },
     {
         id: 4,
-        name: "Shopping Website",
+        name: "Online Market",
         img: Icon4
     },
     {
@@ -65,7 +65,7 @@ const HomeServices = () => {
                 </Link>
             </div>
 
-            <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-6">
+            <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
                 {services}
             </div>
         </div>

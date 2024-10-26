@@ -2,13 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 // Images
-import ProfileImg from "../../assets/images/profile_2.png"
+import ProfileImg from "../../assets/images/profile.jpg"
 
 const Intro = () => {
     return (
-        <div className="flex flex-col justify-between items-center rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark">
-            <div className="aspect-6/4 overflow-hidden rounded-lg max-h-[278px] bg-light text-center dark:bg-dark-2">
-                <img src={ProfileImg} alt="me" className="inline-block h-full w-full scale-[1] object-cover object-center" />
+        <div className="flex flex-col justify-between rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark">
+            <div className="aspect-6/4 overflow-hidden rounded-lg bg-light text-center dark:bg-dark-2">
+                <img src={ProfileImg} alt="" className="inline-block h-full w-full scale-110 object-cover object-center" />
             </div>
 
             <div className="mt-6">
