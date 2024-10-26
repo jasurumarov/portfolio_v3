@@ -1,9 +1,12 @@
 import React from 'react'
 
+// Components
+import Intro from '../../components/intro/Intro'
+
 const Projects = () => {
     return (
-        <main className='projects-page'>
-            <h2>projects</h2>
+        <main className='grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-6'>
+            <Intro />
         </main>
     )
 }

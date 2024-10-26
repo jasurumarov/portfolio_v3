@@ -16,6 +16,18 @@ const navlistData = [
     },
     {
         id: 2,
+        label: "Xizmatlar",
+        SvgComponent: () => (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke='currentColor' strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" className="h-6 w-6 -mb-[4px] -mr-1 ml-[1.5px] text-center text-[#8991A7] transition group-hover:text-dark group-[.active]/menu-item:text-dark dark:group-hover:text-white dark:group-[.active]/menu-item:text-white">
+                <path d="M7.99967 1.3335L1.33301 4.66683L7.99967 8.00016L14.6663 4.66683L7.99967 1.3335Z" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"></path>
+                <path d="M1.33301 8L7.99967 11.3333L14.6663 8" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" ></path>
+                <path d="M1.33301 11.3335L7.99967 14.6668L14.6663 11.3335" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" ></path>
+            </svg>
+        ),
+        path: '/services'
+    },
+    {
+        id: 3,
         label: "Loyihalar",
         SvgComponent: () => (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" className="h-6 w-6 text-[#8991A7] transition group-hover:text-dark group-[.active]/menu-item:text-dark dark:group-hover:text-white dark:group-[.active]/menu-item:text-white">
@@ -25,7 +37,7 @@ const navlistData = [
         path: '/projects'
     },
     {
-        id: 3,
+        id: 4,
         label: "Blog",
         SvgComponent: () => (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" className="h-6 w-6 text-[#8991A7] transition group-hover:text-dark group-[.active]/menu-item:text-dark dark:group-hover:text-white dark:group-[.active]/menu-item:text-white">
@@ -35,7 +47,7 @@ const navlistData = [
         path: '/blog'
     },
     {
-        id: 4,
+        id: 5,
         label: "A'loqa",
         SvgComponent: () => (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" className="h-6 w-6 text-[#8991A7] transition group-hover:text-dark group-[.active]/menu-item:text-dark dark:group-hover:text-white dark:group-[.active]/menu-item:text-white">
@@ -77,6 +89,14 @@ const Header = () => {
             >
                 <item.SvgComponent />
                 <span className='font-bricolage5'>{item.label}</span>
+            </NavLink>
+        </li>
+    ));
+    let mobileNavListItem = navlistData.map(item => (
+        <li onClick={handleMobileMenuToggle} key={item.id} className="group/menu-item">
+            <NavLink to={item.path} className="header__navlink group inline-flex w-full items-center gap-2 rounded-lg px-3 py-2 text-center text-base font-bricolage5 text-muted transition hover:bg-light hover:text-dark group-[.active]/menu-item:bg-light group-[.active]/menu-item:text-dark dark:hover:bg-dark-2 dark:hover:text-white dark:group-[.active]/menu-item:bg-dark-2 dark:group-[.active]/menu-item:text-white">
+                <item.SvgComponent />
+                <span>{item.label}</span>
             </NavLink>
         </li>
     ));
@@ -134,39 +154,7 @@ const Header = () => {
                         </div>
 
                         <ul className="mt-4 flex flex-1 flex-col gap-2">
-                            <li className="group/menu-item">
-                                <NavLink to="/" className="header__navlink group inline-flex w-full items-center gap-2 rounded-lg px-3 py-2 text-center text-base font-bricolage5 text-muted transition hover:bg-light hover:text-dark group-[.active]/menu-item:bg-light group-[.active]/menu-item:text-dark dark:hover:bg-dark-2 dark:hover:text-white dark:group-[.active]/menu-item:bg-dark-2 dark:group-[.active]/menu-item:text-white">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" className="h-6 w-6 text-[#8991A7] transition group-hover:text-dark group-[.active]/menu-item:text-dark dark:group-hover:text-white dark:group-[.active]/menu-item:text-white">
-                                        <path d="M15.833 7.258 11.39 3.802a2.222 2.222 0 0 0-2.728 0L4.216 7.258a2.22 2.22 0 0 0-.858 1.754v6a1.667 1.667 0 0 0 1.667 1.667h10a1.667 1.667 0 0 0 1.667-1.666v-6c0-.686-.317-1.334-.859-1.755Z"></path>
-                                        <path d="M13.333 12.5c-1.841 1.11-4.826 1.11-6.667 0"></path>
-                                    </svg>
-                                    <span>Asosiy</span>
-                                </NavLink>
-                            </li>
-                            <li className="group/menu-item ">
-                                <NavLink to="/projects" className="header__navlink group inline-flex w-full items-center gap-2 rounded-lg px-3 py-2 text-center text-base font-bricolage5 text-muted transition hover:bg-light hover:text-dark group-[.active]/menu-item:bg-light group-[.active]/menu-item:text-dark dark:hover:bg-dark-2 dark:hover:text-white dark:group-[.active]/menu-item:bg-dark-2 dark:group-[.active]/menu-item:text-white">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" className="h-6 w-6 text-[#8991A7] transition group-hover:text-dark group-[.active]/menu-item:text-dark dark:group-hover:text-white dark:group-[.active]/menu-item:text-white">
-                                        <path d="m3.503 5.998 5.949-2.591a.8.8 0 0 1 1.058.439l4.103 9.918a.834.834 0 0 1-.428 1.087l-5.948 2.59a.8.8 0 0 1-1.059-.438l-4.103-9.92a.833.833 0 0 1 .428-1.085ZM13 3.333h.833a.833.833 0 0 1 .834.834v2.916M17.167 5c.22.093.433.18.64.263a.833.833 0 0 1 .442 1.092l-1.915 4.478"></path>
-                                    </svg>
-                                    <span>Loyihalar</span>
-                                </NavLink>
-                            </li>
-                            <li className="group/menu-item ">
-                                <NavLink to="/blog" className="header__navlink group inline-flex w-full items-center gap-2 rounded-lg px-3 py-2 text-center text-base font-bricolage5 text-muted transition hover:bg-light hover:text-dark group-[.active]/menu-item:bg-light group-[.active]/menu-item:text-dark dark:hover:bg-dark-2 dark:hover:text-white dark:group-[.active]/menu-item:bg-dark-2 dark:group-[.active]/menu-item:text-white">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" className="h-6 w-6 text-[#8991A7] transition group-hover:text-dark group-[.active]/menu-item:text-dark dark:group-hover:text-white dark:group-[.active]/menu-item:text-white">
-                                        <path d="m14.667 9.167 1.25-1.25a2.357 2.357 0 1 0-3.333-3.334l-8.75 8.75v3.334h3.333L8.834 15m2.916-9.583 3.333 3.333m.417 9.583 2.792-2.736a1.785 1.785 0 0 0 .004-2.56 1.87 1.87 0 0 0-2.608-.005l-.186.184-.186-.184a1.869 1.869 0 0 0-2.607-.005 1.787 1.787 0 0 0-.005 2.56l2.796 2.746Z"></path>
-                                    </svg>
-                                    <span>Blog</span>
-                                </NavLink>
-                            </li>
-                            <li className="group/menu-item ">
-                                <NavLink to="/contact" className="header__navlink group inline-flex w-full items-center gap-2 rounded-lg px-3 py-2 text-center text-base font-bricolage5 text-muted transition hover:bg-light hover:text-dark group-[.active]/menu-item:bg-light group-[.active]/menu-item:text-dark dark:hover:bg-dark-2 dark:hover:text-white dark:group-[.active]/menu-item:bg-dark-2 dark:group-[.active]/menu-item:text-white">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" className="h-6 w-6 text-[#8991A7] transition group-hover:text-dark group-[.active]/menu-item:text-dark dark:group-hover:text-white dark:group-[.active]/menu-item:text-white">
-                                        <path d="M6.667 7.5h6.666m-6.666 3.333h5M15 3.333a2.5 2.5 0 0 1 2.5 2.5V12.5A2.5 2.5 0 0 1 15 15h-4.167l-4.166 2.5V15H5a2.5 2.5 0 0 1-2.5-2.5V5.833a2.5 2.5 0 0 1 2.5-2.5h10Z"></path>
-                                    </svg>
-                                    <span>A'loqa</span>
-                                </NavLink>
-                            </li>
+                            {mobileNavListItem}
                         </ul>
 
                         <div className="flex flex-col gap-3">

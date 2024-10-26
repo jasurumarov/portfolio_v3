@@ -2,19 +2,18 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 // Images
-import ProfileImg from "../../assets/images/profile.jpg"
+import ProfileImg from "../../assets/images/profile_2.png"
 
 const Intro = () => {
     return (
-        <div className="rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark">
-            <div className="aspect-6/4 overflow-hidden rounded-lg bg-light text-center dark:bg-dark-2">
-                <img src={ProfileImg} alt="" className="inline-block h-full w-full scale-110 object-cover object-bottom" />
+        <div className="flex flex-col justify-between items-center rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark">
+            <div className="aspect-6/4 overflow-hidden rounded-lg max-h-[278px] bg-light text-center dark:bg-dark-2">
+                <img src={ProfileImg} alt="me" className="inline-block h-full w-full scale-[1] object-cover object-center" />
             </div>
 
             <div className="mt-6">
                 <h3 className="text-2xl font-bricolage6 dark:text-light">Jasurbek Umarov 👋</h3>
                 <p className="mt-2 font-bricolage5 text-muted dark:text-light/70">
-                    Tadbirkor,&nbsp;
                     <span className="font-bricolage6 text-dark dark:text-white">
                         Frontend Dasturchi
                     </span>
@@ -22,7 +21,7 @@ const Intro = () => {
                     <span className="font-bricolage6 text-dark dark:text-white">
                         Youtuber,&nbsp;
                     </span>
-                    Bo'lajak Startup Asoschisi,
+                    Startup Asoschisi,
                     <span className="font-bricolage6 text-dark dark:text-white"> JavaScript &amp; React </span>
                     Developer.
                 </p>
@@ -37,10 +36,10 @@ const Intro = () => {
                     </Link>
                     <Link target="_blank" to="https://www.youtube.com/@JasurCoder" className="inline-flex items-center gap-x-2 rounded-lg border border-light bg-transparent px-6 py-4 font-bricolage5 text-dark transition [--trigger:focus] hover:bg-light focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-dark dark:text-light/70 dark:hover:bg-dark dark:hover:text-white">
                         <svg id="YouTube_24" width="24" height="24" fill='currentColor' viewBox="0 0 24 24" className='dark:text-light/70 dark:hover:text-white' xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-                            <rect width="24" height="24" stroke="none" fill="currentColor" opacity="0"></rect>
+                            <rect width="28" height="28" stroke="none" fill="currentColor" opacity="0"></rect>
                             <g transform="matrix(1.43 0 0 1.43 12 12)"> <path style={{ stroke: "none", strokeWidth: 1, strokeDasharray: "none", strokeLinecap: "butt", strokeDashoffset: 0, strokeLinejoin: "miter", strokeMiterlimit: 4, fill: "currentcolor", fillRule: "nonzero", opacity: 1, }} transform=" translate(-8, -7.5)" d="M 8 2 C 5.960938 2 4.15625 2.210938 3.058594 2.375 C 2.160156 2.507813 1.445313 3.210938 1.28125 4.113281 C 1.140625 4.902344 1 6.054688 1 7.5 C 1 8.945313 1.140625 10.097656 1.28125 10.886719 C 1.445313 11.789063 2.160156 12.488281 3.058594 12.625 C 4.160156 12.789063 5.972656 13 8 13 C 10.027344 13 11.835938 12.789063 12.9375 12.625 L 12.941406 12.625 C 13.839844 12.492188 14.554688 11.789063 14.71875 10.886719 C 14.859375 10.09375 15 8.941406 15 7.5 C 15 6.054688 14.859375 4.902344 14.714844 4.113281 C 14.554688 3.210938 13.839844 2.507813 12.941406 2.375 C 11.84375 2.210938 10.039063 2 8 2 Z M 8 3 C 9.96875 3 11.730469 3.203125 12.792969 3.363281 C 13.261719 3.433594 13.640625 3.800781 13.730469 4.289063 C 13.863281 5.027344 14 6.121094 14 7.5 C 14 8.878906 13.863281 9.972656 13.734375 10.707031 C 13.644531 11.199219 13.265625 11.566406 12.792969 11.636719 C 11.722656 11.792969 9.957031 12 8 12 C 6.042969 12 4.273438 11.792969 3.207031 11.636719 C 2.738281 11.566406 2.355469 11.199219 2.265625 10.707031 C 2.136719 9.96875 2 8.878906 2 7.5 C 2 6.117188 2.136719 5.027344 2.265625 4.289063 C 2.355469 3.800781 2.734375 3.433594 3.203125 3.367188 L 3.207031 3.367188 C 4.269531 3.207031 6.03125 3 8 3 Z M 6 5 L 6 10 L 11 7.5 Z" strokeLinecap="round"></path></g>
                         </svg>
-                        <span className='font-bricolage5'>Obuna bo'lish</span>
+                        <span className='xl:block lg:hidden sm:block hidden font-bricolage5'>Obuna bo'lish</span>
                     </Link>
                 </div>
 

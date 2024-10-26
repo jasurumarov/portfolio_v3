@@ -30,20 +30,21 @@ const Background = () => {
 
     return (
         <div className="shapes">
-            <div className="fixed -left-1/2 -top-1/2 animate-spin-very-slow xl:-left-[20%] xl:-top-1/3">
+            <div style={{ pointerEvents: 'none', }} className="fixed -left-1/2 -top-1/2 animate-spin-very-slow xl:-left-[20%] xl:-top-1/3">
                 <img src={img1} alt="Gradient 1" className="" />
             </div>
 
-            <div className="fixed -right-[50%] top-[10%]  animate-spin-very-slow xl:-right-[15%] xl:top-[10%]">
+            <div style={{ pointerEvents: 'none', }} className="fixed -right-[50%] top-[10%] animate-spin-very-slow xl:-right-[15%] xl:top-[10%]">
                 <img src={img2} alt="Gradient 2" className="" />
             </div>
 
             {/* Image 3 with slower movement and rotation */}
             <div
-                className="move-with-cursor fixed left-[10%] top-[20%] "
+                className="fixed left-[10%] top-[20%] "
                 style={{
-                    transition: 'transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1)', // Slower transition
-                    transform: `translate(${translateX(0.015)}px, ${translateY(0.02)}px) rotate(${rotate(0.01)}deg)`, // Slower movement and rotation
+                    transition: 'transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                    transform: `translate(${translateX(0.015)}px, ${translateY(0.02)}px) rotate(${rotate(0.01)}deg)`,
+                    pointerEvents: 'none', // Uslab bo'lmasligi uchun
                 }}
             >
                 <img src={img3} alt="3D Object 1" className="" />
@@ -51,10 +52,11 @@ const Background = () => {
 
             {/* Image 4 with slower movement and rotation */}
             <div
-                className="move-with-cursor fixed bottom-[20%] right-[10%] "
+                className="fixed bottom-[20%] right-[10%] "
                 style={{
-                    transition: 'transform 1.1s cubic-bezier(0.34, 1.56, 0.64, 1)', // Slower transition
-                    transform: `translate(${translateX(0.01)}px, ${translateY(0.01)}px) rotate(${rotate(0.018)}deg)`, // Slower movement and rotation
+                    transition: 'transform 1.1s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                    transform: `translate(${translateX(0.01)}px, ${translateY(0.01)}px) rotate(${rotate(0.018)}deg)`,
+                    pointerEvents: 'none', // Uslab bo'lmasligi uchun
                 }}
             >
                 <img src={img4} alt="3D Object 2" className="" />

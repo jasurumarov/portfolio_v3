@@ -4,6 +4,10 @@ import React from 'react'
 import Experience from '../../components/experience/Experience'
 import Intro from '../../components/intro/Intro'
 import TechStack from '../../components/techstack/TechStack'
+import HomeProjects from '../../components/homeProjects/HomeProjects'
+import Youtube from '../../components/youtube/Youtube'
+import HomeContact from '../../components/homeContact/HomeContact'
+import HomeServices from '../../components/homeServices/HomeServices'
 
 const Home = () => {
     return (
@@ -13,6 +17,10 @@ const Home = () => {
                 <Experience />
                 <TechStack />
             </div>
+            <HomeProjects />
+            <Youtube />
+            <HomeContact />
+            <HomeServices />
         </main>
     )
 }
