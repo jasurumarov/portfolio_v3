@@ -16,7 +16,7 @@ const HomeContact = () => {
 
             <Link to="/contact" className="mt-6 inline-flex items-center justify-center gap-2 border-b text-center text-base text-primary transition hover:border-b-primary dark:border-b-muted dark:hover:border-b-primary">
                 <span className='font-bricolage'>Bog'lanish</span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" className="h-5 w-5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" className="h-5 w-5">
                     <path d="M17.5 11.667v-5h-5"></path>
                     <path d="m17.5 6.667-7.5 7.5-7.5-7.5"></path>
                 </svg>

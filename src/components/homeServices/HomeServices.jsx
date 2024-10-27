@@ -59,7 +59,7 @@ const HomeServices = () => {
                 <h3 className="text-2xl font-bricolage6 dark:text-light">Xizmatlar</h3>
                 <Link to="/services" className="inline-flex items-center justify-center gap-2 border-b text-center text-base text-primary transition hover:border-b-primary dark:border-b-muted dark:hover:border-b-primary">
                     <span className='font-bricolage'>Barchasini Ko'rish</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" className="h-5 w-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" className="h-5 w-5">
                         <path d="M4.167 10h11.666m-4.999 5 5-5m-5-5 5 5"></path>
                     </svg>
                 </Link>

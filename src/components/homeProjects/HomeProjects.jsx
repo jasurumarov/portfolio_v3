@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Lightbox from 'react-awesome-lightbox';
-import 'react-awesome-lightbox/build/style.css';
 
 // Images
 import Image1 from "../../assets/images/projects/nornlight1.png";
@@ -65,14 +63,6 @@ const HomeProjects = () => {
                     </div>
                 ))}
             </div>
-
-            {isOpen && (
-                <Lightbox
-                    image={currentImage}
-                    title="Project Image"
-                    onClose={() => setIsOpen(false)}
-                />
-            )}
         </div>
     );
 };
