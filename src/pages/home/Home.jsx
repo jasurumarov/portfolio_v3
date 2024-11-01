@@ -18,9 +18,9 @@ const Home = () => {
                 <TechStack />
             </div>
             <HomeProjects />
+            <HomeServices />
             <Youtube />
             <HomeContact />
-            <HomeServices />
         </main>
     )
 }

@@ -1,23 +1,25 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Lightbox } from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
 
 // Images
-import Image1 from "../../assets/images/projects/nornlight1.png";
-import Image2 from "../../assets/images/projects/e-comm1.png";
+import Image1 from "../../assets/images/projects/nornlight.png";
+import Image2 from "../../assets/images/projects/e-comm.png";
 
 const HomeProjects = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [currentImage, setCurrentImage] = useState(null);
-
-    // Array of project links
     const projectLinks = [
         "https://nornlight-pearl.vercel.app/",
         "https://e-comm7.vercel.app/"
     ];
 
-    const openLightbox = (image) => {
-        setCurrentImage(image);
-        setIsOpen(true);
+    const images = [Image1, Image2];
+    const [open, setOpen] = useState(false);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const openLightbox = (index) => {
+        setCurrentImageIndex(index);
+        setOpen(true);
     };
 
     return (
@@ -33,20 +35,15 @@ const HomeProjects = () => {
             </div>
 
             <div className="mt-6 space-y-6">
-                {[Image1, Image2].map((image, index) => (
+                {images.map((image, index) => (
                     <div key={index} className="group relative overflow-hidden rounded-lg bg-light p-4 pb-0 dark:bg-dark-2 md:p-6 md:pb-0">
-                        <div className="relative aspect-6/4 overflow-hidden rounded-t-lg">
+                        <div className="aspect-6/4 overflow-hidden rounded-t-lg">
                             <img
                                 src={image}
                                 alt={`project-${index}`}
-                                className="lg:max-h-[208px] w-full rounded-t-lg object-cover object-top transition cursor-pointer"
+                                className="lg:max-h-[208px] w-full rounded-t-lg object-cover object-top transition"
                             />
-
-                            {/* The button that opens the lightbox */}
-                            <button
-                                onClick={() => openLightbox(image)} // Open lightbox on button click
-                                className="project-gallery-link absolute left-1/2 top-1/2 grid h-10 w-10 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full bg-white text-primary shadow-lg transition lg:invisible lg:-translate-y-[40%] lg:opacity-0 lg:group-hover:visible lg:group-hover:-translate-y-1/2 lg:group-hover:opacity-100"
-                            >
+                            <button onClick={() => openLightbox(index)} className="project-gallery-link absolute left-1/2 top-1/2 grid h-10 w-10 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full bg-white text-primary shadow-lg transition lg:invisible lg:-translate-y-[40%] lg:opacity-0 lg:group-hover:visible lg:group-hover:-translate-y-1/2 lg:group-hover:opacity-100">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" className="h-6 w-6">
                                     <path d="M10 4.167v11.666M4.167 10h11.666"></path>
                                 </svg>
@@ -63,6 +60,14 @@ const HomeProjects = () => {
                     </div>
                 ))}
             </div>
+
+            <Lightbox
+                open={open}
+                close={() => setOpen(false)}
+                slides={images.map((image) => ({ src: image }))}
+                index={currentImageIndex}
+                onCurrentIndexChange={setCurrentImageIndex}
+            />
         </div>
     );
 };
