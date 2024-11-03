@@ -10,7 +10,7 @@ const Contact = () => {
     }, [])
     return (
         <main className='grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-6'>
-            <Intro isStretch={'self-start'}/>
+            <Intro isStretch={'self-start'} />
             <ContactForm />
         </main>
     )

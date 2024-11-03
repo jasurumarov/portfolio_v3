@@ -63,4 +63,4 @@ const Youtube = () => {
     )
 }
 
-export default Youtube
+export default React.memo(Youtube);

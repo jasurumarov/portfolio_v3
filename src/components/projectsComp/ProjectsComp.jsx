@@ -59,7 +59,7 @@ const ProjectsComp = () => {
         </div>
     ))
     return (
-        <div className="rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark lg:col-span-2 lg:p-10">
+        <section className="rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark lg:col-span-2 lg:p-10">
             <div className="">
                 <h2 className="text-3xl font-bricolage6 leading-tight text-dark dark:text-light lg:text-[40px] lg:leading-tight">
                     Loyihalar
@@ -79,8 +79,8 @@ const ProjectsComp = () => {
                     Birga ishlaymizmi?👋 Startup 🚀 Loyiha 🗂️ Intervyu 🎥 Investitsiya 💰 Sherikchilik ✊ Birga ishlaymizmi?👋 Startup 🚀 Loyiha 🗂️ Intervyu 🎥 Investitsiya 💰 Sherikchilik ✊ Birga ishlaymizmi?👋 Startup 🚀 Loyiha 🗂️ Intervyu 🎥 Investitsiya 💰 Sherikchilik ✊
                 </Link>
             </marquee>
-        </div>
+        </section>
     )
 }
 
-export default ProjectsComp
+export default React.memo(ProjectsComp);

@@ -16,7 +16,7 @@ import Background from './components/background/Background'
 
 function App() {
 	return (
-		<div className='relative h-screen overflow-y-auto overflow-x-hidden bg-light text-dark dark:bg-dark-2 dark:text-light'>
+		<div className='relative bg-light text-dark dark:bg-dark-2 dark:text-light'>
 			<div className='sticky z-50 mx-auto flex max-w-screen-2xl flex-col justify-between gap-4 p-4 lg:gap-6 lg:p-6'>
 				<Header />
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Lightbox } from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
@@ -13,14 +13,16 @@ const HomeProjects = () => {
         "https://e-comm7.vercel.app/"
     ];
 
-    const images = [Image1, Image2];
+    const images = useMemo(() => [Image1, Image2], []);
     const [open, setOpen] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-    const openLightbox = (index) => {
+    const openLightbox = useCallback((index) => {
         setCurrentImageIndex(index);
         setOpen(true);
-    };
+    }, []);
+
+    const slides = useMemo(() => images.map((image) => ({ src: image })), [images]);
 
     return (
         <div className="rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark">
@@ -64,7 +66,7 @@ const HomeProjects = () => {
             <Lightbox
                 open={open}
                 close={() => setOpen(false)}
-                slides={images.map((image) => ({ src: image }))}
+                slides={slides}
                 index={currentImageIndex}
                 onCurrentIndexChange={setCurrentImageIndex}
             />
@@ -72,4 +74,4 @@ const HomeProjects = () => {
     );
 };
 
-export default HomeProjects;
+export default React.memo(HomeProjects);

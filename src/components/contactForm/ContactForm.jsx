@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { useGetInputValue } from '../../hooks/useGetInputValue'
 
 // Icons
@@ -12,12 +12,10 @@ import Icon7 from '../../assets/icons/socialMedia/linkedin.svg'
 import Icon8 from '../../assets/icons/socialMedia/facebook.svg'
 import { Link } from 'react-router-dom'
 
-// Token and ID
+// Constants
 const BOT_TOKEN = "7167621990:AAFEFIaAPwbfqpugbkwxmUFp0CyADqu1J8Y"
 const CHAT_ID = "-1002035440165"
-
-// InitialState
-let initialState = {
+const initialState = {
     name: "",
     number: "",
     message: ""
@@ -74,11 +72,12 @@ const socialData = [
     },
 ]
 
-const ContactForm = () => {
+const ContactForm = React.memo(() => {
     const { formData, setFormData, handleChange } = useGetInputValue(initialState)
+
     const handleSendToTelegram = e => {
         e.preventDefault()
-        console.log(formData);
+
         let text = `FIO: <b>${formData.name}</b>`
         text += "%0A"
         text += `Tel: <b>${formData.number}</b>`
@@ -96,13 +95,16 @@ const ContactForm = () => {
         setFormData(initialState)
     }
 
-    let socialMedia = socialData?.map(item => (
-        <Link key={item.id} to={item.Link} target="_blank" className="rounded-2xl bg-light p-2 text-center dark:bg-dark-2 md:p-4">
-            <div className="grid place-content-center rounded-lg bg-white p-6 dark:bg-black">
-                <img src={item.img} alt={item.alt} className="h-16 rounded-lg" />
-            </div>
-        </Link>
-    ))
+    const socialMedia = useMemo(() =>
+        socialData.map(item => (
+            <Link key={item.id} to={item.Link} target="_blank" className="rounded-2xl bg-light p-2 text-center dark:bg-dark-2 md:p-4">
+                <div className="grid place-content-center rounded-lg bg-white p-6 dark:bg-black">
+                    <img src={item.img} alt={item.alt} className="h-16 rounded-lg" />
+                </div>
+            </Link>
+        )),
+        [socialData]
+    );
     return (
         <div className="rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark lg:col-span-2 lg:p-10">
             <div className="flex flex-col-reverse items-start gap-6 lg:flex-row lg:gap-10">
@@ -125,7 +127,7 @@ const ContactForm = () => {
                     <span className='font-bricolage'>Online</span>
                 </div>
             </div>
-            <form onSubmit={handleSendToTelegram} className='bg-light dark:bg-dark-2 rounded-lg p-6 mt-10 lg:mt-10 grid grid-cols-2 gap-y-6'>
+            <form onSubmit={handleSendToTelegram} className='bg-light dark:bg-dark-2 rounded-lg p-4 sm:p-6 mt-10 lg:mt-10 grid grid-cols-2 gap-y-6'>
                 <div className='col-span-3 flex flex-col sm:flex-row gap-6'>
                     <div className='flex flex-col gap-[6px] w-full'>
                         <label className='text-[15px] font-bricolage dark:text-light/70' htmlFor="name">Ism Familya</label>
@@ -148,6 +150,6 @@ const ContactForm = () => {
 
         </div>
     )
-}
+});
 
 export default ContactForm

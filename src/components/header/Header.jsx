@@ -141,7 +141,7 @@ const Header = () => {
                         </svg>
                     </button>
                 </nav>
-                <div id="mobile-menu" className={`hs-overlay fixed bottom-0 start-0 top-0 z-[60] h-full w-64 -translate-x-full transform overflow-y-auto bg-white transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : ''} dark:bg-black [&amp;::-webkit-scrollbar-thumb]:rounded-full [&amp;::-webkit-scrollbar-thumb]:bg-gray-300 [&amp;::-webkit-scrollbar-track]:bg-gray-100 [&amp;::-webkit-scrollbar]:w-2 open opened`} tabIndex="-1">
+                <aside id="mobile-menu" className={`hs-overlay fixed bottom-0 start-0 top-0 z-[60] h-full w-64 -translate-x-full transform overflow-y-auto bg-white transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : ''} dark:bg-black [&amp;::-webkit-scrollbar-thumb]:rounded-full [&amp;::-webkit-scrollbar-thumb]:bg-gray-300 [&amp;::-webkit-scrollbar-track]:bg-gray-100 [&amp;::-webkit-scrollbar]:w-2 open opened`} tabIndex="-1">
                     <div className="flex h-full flex-col justify-between gap-5 p-5">
                         <div className="">
                             <Link onClick={handleMobileMenuToggle} to="/" className="inline-flex items-center gap-3 px-3 text-2xl font-bricolage6 text-dark dark:text-white">
@@ -192,7 +192,7 @@ const Header = () => {
                             </Link>
                         </div>
                     </div>
-                </div>
+                </aside>
                 <div id="mobile-menu-backdrop" onClick={handleMobileMenuToggle} style={{ zIndex: "59" }} data-hs-overlay-backdrop-template="" className={`${isMobileMenuOpen ? 'block' : "hidden"} duration fixed inset-0 bg-gray-900 bg-opacity-50 dark:bg-opacity-80 dark:bg-neutral-900 `}></div>
             </header>
         </>

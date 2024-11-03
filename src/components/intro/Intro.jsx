@@ -71,4 +71,4 @@ const Intro = ({ isStretch }) => {
     )
 }
 
-export default Intro
+export default React.memo(Intro)

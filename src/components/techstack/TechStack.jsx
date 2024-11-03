@@ -62,4 +62,4 @@ const TechStack = () => {
     )
 }
 
-export default TechStack
+export default React.memo(TechStack);

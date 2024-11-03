@@ -1,28 +1,29 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import ExperienceData from './ExperienceData'
 // import './Experience.scss';
 
 const Experience = () => {
-    let experiences = ExperienceData?.map(experience => (
-        <div key={experience.id} className="flex flex-col gap-1 md:flex-row md:gap-10">
-            <p className="mt-1 text-sm font-bricolage5 text-muted dark:text-light/70">
-                {experience.startYear} - {experience.endYear}
-            </p>
-            <div className="flex items-center gap-3">
-                <div className="grid h-8 w-8 shrink-0 place-content-center overflow-hidden rounded-lg bg-light dark:bg-dark-2">
-                    <img src={experience.img} alt={experience.name} className="h-8 w-8" />
-                </div>
-                <div>
-                    <h6 className="text-base font-bricolage6 text-dark dark:text-light/70">
-                        {experience.name}
-                    </h6>
-                    <p className=" text-sm text-muted">
-                        {experience.desc}
-                    </p>
+    const experiences = useMemo(() =>
+        ExperienceData?.map(experience => (
+            <div key={experience.id} className="flex flex-col gap-1 md:flex-row md:gap-10">
+                <p className="mt-1 text-sm font-bricolage5 text-muted dark:text-light/70">
+                    {experience.startYear} - {experience.endYear}
+                </p>
+                <div className="flex items-center gap-3">
+                    <div className="grid h-8 w-8 shrink-0 place-content-center overflow-hidden rounded-lg bg-light dark:bg-dark-2">
+                        <img src={experience.img} alt={experience.name} className="h-8 w-8" />
+                    </div>
+                    <div>
+                        <h6 className="text-base font-bricolage6 text-dark dark:text-light/70">
+                            {experience.name}
+                        </h6>
+                        <p className="text-sm text-muted">
+                            {experience.desc}
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    ))
+        )), [ExperienceData]);
     return (
         <div className="group rounded-2xl bg-white px-6 pt-0 shadow dark:bg-black dark:shadow-dark">
             <h3 className="relative z-10 bg-white pb-2 pt-6 text-2xl font-bricolage6 dark:bg-black dark:text-light">
@@ -38,4 +39,4 @@ const Experience = () => {
     )
 }
 
-export default Experience
+export default React.memo(Experience);

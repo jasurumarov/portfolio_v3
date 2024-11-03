@@ -40,7 +40,7 @@ const servicesData = [
         name: "Telegram Bot",
         img: Icon6
     },
-]
+];
 
 const HomeServices = () => {
     let services = servicesData?.map(service => (
@@ -72,4 +72,4 @@ const HomeServices = () => {
     )
 }
 
-export default HomeServices
+export default React.memo(HomeServices);
