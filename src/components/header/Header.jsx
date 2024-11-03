@@ -144,7 +144,7 @@ const Header = () => {
                 <div id="mobile-menu" className={`hs-overlay fixed bottom-0 start-0 top-0 z-[60] h-full w-64 -translate-x-full transform overflow-y-auto bg-white transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : ''} dark:bg-black [&amp;::-webkit-scrollbar-thumb]:rounded-full [&amp;::-webkit-scrollbar-thumb]:bg-gray-300 [&amp;::-webkit-scrollbar-track]:bg-gray-100 [&amp;::-webkit-scrollbar]:w-2 open opened`} tabIndex="-1">
                     <div className="flex h-full flex-col justify-between gap-5 p-5">
                         <div className="">
-                            <Link to="/" className="inline-flex items-center gap-3 px-3 text-2xl font-bricolage6 text-dark dark:text-white">
+                            <Link onClick={handleMobileMenuToggle} to="/" className="inline-flex items-center gap-3 px-3 text-2xl font-bricolage6 text-dark dark:text-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="h-6 w-6">
                                     <path fill="currentColor" d="M0 1.5A1.5 1.5 0 0 1 1.5 0H9a1.5 1.5 0 0 1 1.5 1.5v21A1.5 1.5 0 0 1 9 24H1.5A1.5 1.5 0 0 1 0 22.5v-21Zm13.5 0A1.5 1.5 0 0 1 15 0h7.5A1.5 1.5 0 0 1 24 1.5V9a1.5 1.5 0 0 1-1.5 1.5H15A1.5 1.5 0 0 1 13.5 9V1.5Zm0 13.5a1.5 1.5 0 0 1 1.5-1.5h7.5A1.5 1.5 0 0 1 24 15v7.5a1.5 1.5 0 0 1-1.5 1.5H15a1.5 1.5 0 0 1-1.5-1.5V15Z"></path>
                                 </svg>
