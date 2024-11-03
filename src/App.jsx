@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import { Toaster } from 'react-hot-toast'
 import './index.css'
 // import './scss/style.scss'
 
@@ -18,6 +19,10 @@ function App() {
 	return (
 		<div className='relative bg-light text-dark dark:bg-dark-2 dark:text-light'>
 			<div className='sticky z-50 mx-auto flex max-w-screen-2xl flex-col justify-between gap-4 p-4 lg:gap-6 lg:p-6'>
+				<Toaster
+					position="top-right"
+					reverseOrder={false}
+				/>
 				<Header />
 
 				<Routes>

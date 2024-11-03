@@ -11,6 +11,7 @@ import Icon6 from '../../assets/icons/socialMedia/instagram.svg'
 import Icon7 from '../../assets/icons/socialMedia/linkedin.svg'
 import Icon8 from '../../assets/icons/socialMedia/facebook.svg'
 import { Link } from 'react-router-dom'
+import toast from 'react-hot-toast'
 
 // Constants
 const BOT_TOKEN = "7167621990:AAFEFIaAPwbfqpugbkwxmUFp0CyADqu1J8Y"
@@ -93,6 +94,19 @@ const ContactForm = React.memo(() => {
         api.send()
 
         setFormData(initialState)
+        toast.success(
+            "Xabaringiz muvaffaqiyatli jo'natildi!",
+            {
+                duration: 5000,
+                style: {
+                    backgroundColor: document.documentElement.classList.contains('dark') ? '#0e1018' : '#FFFFFF',
+                    color: document.documentElement.classList.contains('dark') ? '#f0f2f5' : '#1a1f2c', 
+                    border: '1px solid #1a1f2c',
+                    fontFamily: 'bricolage5', 
+                },
+            }
+        );
+
     }
 
     const socialMedia = useMemo(() =>
