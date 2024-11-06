@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import { useGetInputValue } from '../../hooks/useGetInputValue'
 
 // Audio file
-const successSound = new Audio('/notification.mp3') 
+const successSound = new Audio('/notification.mp3')
 
 // Icons
 import Icon1 from '../../assets/icons/socialMedia/youtube.svg'
@@ -97,17 +97,17 @@ const ContactForm = React.memo(() => {
         api.send()
 
         setFormData(initialState)
-        successSound.play() 
-        
+        successSound.play()
+
         toast.success(
             "Xabaringiz muvaffaqiyatli jo'natildi!",
             {
                 duration: 5000,
                 style: {
                     backgroundColor: document.documentElement.classList.contains('dark') ? '#0e1018' : '#FFFFFF',
-                    color: document.documentElement.classList.contains('dark') ? '#f0f2f5' : '#1a1f2c', 
+                    color: document.documentElement.classList.contains('dark') ? '#f0f2f5' : '#1a1f2c',
                     border: '1px solid #1a1f2c',
-                    fontFamily: 'bricolage5', 
+                    fontFamily: 'bricolage5',
                 },
             }
         );
@@ -149,16 +149,16 @@ const ContactForm = React.memo(() => {
             <form onSubmit={handleSendToTelegram} className='bg-light dark:bg-dark-2 rounded-lg p-4 sm:p-6 mt-10 lg:mt-10 grid grid-cols-2 gap-y-6'>
                 <div className='col-span-3 flex flex-col sm:flex-row gap-6'>
                     <div className='flex flex-col gap-[6px] w-full'>
-                        <label className='text-[15px] font-bricolage dark:text-light/70' htmlFor="name">Ism Familya</label>
+                        <label className='text-[15px] font-bricolage dark:text-white' htmlFor="name">Ism Familya</label>
                         <input onChange={handleChange} value={formData.name} required className='w-full py-4 px-6 dark:bg-black font-bricolage rounded-lg border border-solid border-[#DBDFE5] focus:border-dark outline-none dark:border-dark transition-colors' placeholder='Ismingizni kiriting' id='name' name='name' type="text" />
                     </div>
                     <div className='flex flex-col gap-[6px] w-full'>
-                        <label className='text-[15px] font-bricolage dark:text-light/70' htmlFor="number">Telefon Raqam</label>
+                        <label className='text-[15px] font-bricolage dark:text-white' htmlFor="number">Telefon Raqam</label>
                         <input onChange={handleChange} value={formData.number} required className='w-full py-4 px-6 dark:bg-black font-bricolage rounded-lg border border-solid border-[#DBDFE5] focus:border-dark outline-none dark:border-dark transition-colors' placeholder='Raqamingizni kiriting' id='number' name='number' type="tel" />
                     </div>
                 </div>
                 <div className='flex flex-col gap-[6px] col-span-3'>
-                    <label className='text-[15px] font-bricolage dark:text-light/70' htmlFor="message">Xabar</label>
+                    <label className='text-[15px] font-bricolage dark:text-white' htmlFor="message">Xabar</label>
                     <textarea onChange={handleChange} value={formData.message} required rows={6} className='w-full py-4 px-6 dark:bg-black font-bricolage rounded-lg border border-solid border-[#DBDFE5] focus:border-dark outline-none dark:border-dark transition-colors' placeholder='Xabaringizni kiriting' name="message" id="message"></textarea>
                 </div>
                 <button className='col-span-3 rounded-lg bg-primary py-4 font-bricolage5 text-white '>Jo'natish</button>
