@@ -1,11 +1,10 @@
 import { Route, Routes } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
 import './index.css'
-// import './scss/style.scss'
 
 // Pages
 import Home from './pages/home/Home'
-import Services from './pages/services/Services'
+// import Services from './pages/services/Services'
 import Projects from './pages/projects/Projects'
 import Blog from './pages/blog/Blog'
 import Contact from './pages/contact/Contact'

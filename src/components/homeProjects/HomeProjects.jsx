@@ -25,7 +25,7 @@ const HomeProjects = () => {
     const slides = useMemo(() => images.map((image) => ({ src: image })), [images]);
 
     return (
-        <div className="rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark">
+        <div className="rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark self-start xl:self-auto">
             <div className="flex flex-wrap items-center justify-between gap-2">
                 <h3 className="text-2xl font-bricolage6 dark:text-light">Loyihalar</h3>
                 <Link to="/projects" className="inline-flex items-center justify-center gap-2 border-b text-center text-base text-primary transition hover:border-b-primary dark:border-b-muted dark:hover:border-b-primary">

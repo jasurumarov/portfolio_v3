@@ -22,8 +22,8 @@ const ExperienceData = [
     },
     {
         id: 3,
-        startYear: "2022",
-        endYear: "2023",
+        startYear: "2023",
+        endYear: "2024",
         img: CompanyImg3,
         name: "Freelancer",
         desc: "React, Next Frontend Developer"

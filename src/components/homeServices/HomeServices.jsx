@@ -30,16 +30,16 @@ const servicesData = [
         name: "Online Market",
         img: Icon4
     },
-    {
-        id: 5,
-        name: "CRM System",
-        img: Icon5
-    },
-    {
-        id: 6,
-        name: "Telegram Bot",
-        img: Icon6
-    },
+    // {
+    //     id: 5,
+    //     name: "CRM System",
+    //     img: Icon5
+    // },
+    // {
+    //     id: 6,
+    //     name: "Telegram Bot",
+    //     img: Icon6
+    // },
 ];
 
 const HomeServices = () => {
@@ -54,18 +54,18 @@ const HomeServices = () => {
         </div>
     ))
     return (
-        <div className="rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark lg:col-span-3">
+        <div className="rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark lg:col-span-2">
             <div className="flex flex-wrap items-center justify-between gap-2">
                 <h3 className="text-2xl font-bricolage6 dark:text-light">Xizmatlar</h3>
-                <Link to="/services" className="inline-flex items-center justify-center gap-2 border-b text-center text-base text-primary transition hover:border-b-primary dark:border-b-muted dark:hover:border-b-primary">
-                    <span className='font-bricolage'>Barchasini Ko'rish</span>
+                <Link to="/contact" className="inline-flex items-center justify-center gap-2 border-b text-center text-base text-primary transition hover:border-b-primary dark:border-b-muted dark:hover:border-b-primary">
+                    <span className='font-bricolage'>Buyurtma Berish</span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" className="h-5 w-5">
                         <path d="M4.167 10h11.666m-4.999 5 5-5m-5-5 5 5"></path>
                     </svg>
                 </Link>
             </div>
 
-            <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+            <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
                 {services}
             </div>
         </div>

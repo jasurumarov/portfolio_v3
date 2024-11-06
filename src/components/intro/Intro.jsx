@@ -2,12 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 // Images
-import ProfileImg from "../../assets/images/profile.jpg"
+import ProfileImg from "../../assets/images/profile_2.png"
 
 const Intro = ({ isStretch }) => {
     return (
         <div className={`flex ${isStretch} flex-col justify-between rounded-2xl bg-white p-6 shadow dark:bg-black dark:shadow-dark`}>
-            <div className="aspect-6/4 overflow-hidden rounded-lg bg-light text-center dark:bg-dark-2">
+            <div className="aspect-6/4 overflow-hidden xl:max-h-[280px] rounded-lg bg-light text-center dark:bg-dark-2">
                 <img src={ProfileImg} alt="" className="inline-block h-full w-full scale-110 object-cover object-center" />
             </div>
 
@@ -21,7 +21,7 @@ const Intro = ({ isStretch }) => {
                     <span className="font-bricolage6 text-dark dark:text-white">
                         Youtuber,&nbsp;
                     </span>
-                    Startup Asoschisi,
+                    Tajribali Freelancer,
                     <span className="font-bricolage6 text-dark dark:text-white"> JavaScript &amp; React </span>
                     Developer.
                 </p>
