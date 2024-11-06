@@ -12,7 +12,7 @@ import HomeServices from '../../components/homeServices/HomeServices'
 const Home = () => {
     return (
         <main className='grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-6'>
-            <Intro />
+            <Intro isHidden={true}/>
             <div className='grid grid-cols-1 gap-4 lg:gap-6'>
                 <Experience />
                 <TechStack />
