@@ -1,6 +1,9 @@
 import React, { useMemo } from 'react'
 import { useGetInputValue } from '../../hooks/useGetInputValue'
 
+// Audio file
+const successSound = new Audio('/notification.mp3') 
+
 // Icons
 import Icon1 from '../../assets/icons/socialMedia/youtube.svg'
 import Icon2 from '../../assets/icons/socialMedia/telegram.svg'
@@ -94,6 +97,8 @@ const ContactForm = React.memo(() => {
         api.send()
 
         setFormData(initialState)
+        successSound.play() 
+        
         toast.success(
             "Xabaringiz muvaffaqiyatli jo'natildi!",
             {
