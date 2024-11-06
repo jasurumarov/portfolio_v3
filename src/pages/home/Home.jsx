@@ -18,7 +18,7 @@ const Home = () => {
                 <TechStack />
             </div>
             <HomeProjects />
-            <HomeServices />
+            {/* <HomeServices /> */}
             <Youtube />
             <HomeContact />
         </main>

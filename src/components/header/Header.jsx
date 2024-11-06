@@ -14,18 +14,18 @@ const navlistData = [
         ),
         path: '/'
     },
-    {
-        id: 2,
-        label: "Xizmatlar",
-        SvgComponent: () => (
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke='currentColor' strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" className="h-6 w-6 -mb-[4px] -mr-1 ml-[1.5px] text-center text-[#8991A7] transition group-hover:text-dark group-[.active]/menu-item:text-dark dark:group-hover:text-white dark:group-[.active]/menu-item:text-white">
-                <path d="M7.99967 1.3335L1.33301 4.66683L7.99967 8.00016L14.6663 4.66683L7.99967 1.3335Z" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"></path>
-                <path d="M1.33301 8L7.99967 11.3333L14.6663 8" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" ></path>
-                <path d="M1.33301 11.3335L7.99967 14.6668L14.6663 11.3335" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" ></path>
-            </svg>
-        ),
-        path: '/services'
-    },
+    // {
+    //     id: 2,
+    //     label: "Xizmatlar",
+    //     SvgComponent: () => (
+    //         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke='currentColor' strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" className="h-6 w-6 -mb-[4px] -mr-1 ml-[1.5px] text-center text-[#8991A7] transition group-hover:text-dark group-[.active]/menu-item:text-dark dark:group-hover:text-white dark:group-[.active]/menu-item:text-white">
+    //             <path d="M7.99967 1.3335L1.33301 4.66683L7.99967 8.00016L14.6663 4.66683L7.99967 1.3335Z" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"></path>
+    //             <path d="M1.33301 8L7.99967 11.3333L14.6663 8" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" ></path>
+    //             <path d="M1.33301 11.3335L7.99967 14.6668L14.6663 11.3335" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" ></path>
+    //         </svg>
+    //     ),
+    //     path: '/services'
+    // },
     {
         id: 3,
         label: "Loyihalar",
