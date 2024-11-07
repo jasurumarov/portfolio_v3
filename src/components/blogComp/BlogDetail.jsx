@@ -37,10 +37,10 @@ const BlogDetail = () => {
 
                     <div className="flex flex-wrap gap-2">
                         <p className="cursor-pointer inline-flex items-center justify-center gap-2 rounded border border-light bg-white px-2 py-1 text-center text-xs font-bricolage5 leading-none text-dark transition hover:bg-primary hover:text-white dark:border-dark dark:bg-dark-2 dark:text-light/70 dark:hover:bg-primary dark:hover:text-white">
-                            Startup
+                            Dasturchilar
                         </p>
                         <p className="cursor-pointer inline-flex items-center justify-center gap-2 rounded border border-light bg-white px-2 py-1 text-center text-xs font-bricolage5 leading-none text-dark transition hover:bg-primary hover:text-white dark:border-dark dark:bg-dark-2 dark:text-light/70 dark:hover:bg-primary dark:hover:text-white">
-                            UstozMarket
+                            StackOverflow
                         </p>
                     </div>
                 </div>
