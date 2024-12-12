@@ -1,11 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 // Images
 import Img1 from "../../assets/images/projects/nornlightpr.png"
 import Img2 from "../../assets/images/projects/aikopr.png"
-import Img3 from "../../assets/images/projects/e-commpr.png"
+import Img3 from "../../assets/images/projects/darrov-l.png"
 import Img4 from "../../assets/images/projects/u-devspr.png"
-import { Link } from 'react-router-dom'
 
 const projectsData = [
     {
@@ -20,14 +20,14 @@ const projectsData = [
         img: Img2,
         name: "AIKO - Admin Dashboard",
         desc: "'AIKO' kompanyasi uchun admin dashboard. Maxfiyligi sabab link qo'ymadim",
-        link: "/"
+        link: "/projects"
     },
     {
         id: 3,
         img: Img3,
-        name: "E-Comm",
-        desc: "Kwork freelancing platform orqali olingan loyiha, productionga chiqmagani sababli fake api ulab loyihalarim orasiga qo'shdim",
-        link: "https://e-comm7.vercel.app/"
+        name: "DARROV",
+        desc: "To'rtko'l tumanida yangi ishga tushgan ovqat yetkazib berish biznesi uchun admin/partner dashboard. Maxfiyligi sabab link qo'ymadim",
+        link: "/projects"
     },
     {
         id: 4,
