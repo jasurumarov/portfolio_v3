@@ -19,6 +19,21 @@ const BlogComp = () => {
                     <div className="">
                         <div className="mt-6">
                             <h2 className="text-xl font-bricolage5 xl:text-2xl">
+                                <Link to="2" className="inline-block text-dark transition hover:text-primary dark:text-light/70 dark:hover:text-primary">
+                                    📌 "DARROV" Dashboard: Restoranlar uchun yangi imkoniyatlar
+                                </Link>
+                            </h2>
+                            <ul className="mt-1 flex flex-wrap items-center gap-2">
+                                <li className="font-bricolage relative text-sm text-muted/50 before:mr-1 before:content-['\2022'] dark:text-muted">
+                                    &nbsp;2 daq
+                                </li>
+                                <li className="font-bricolage relative text-sm text-muted/50 before:mr-1 before:content-['\2022'] dark:text-muted">
+                                    &nbsp;Dec 19, 2024
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="mt-6">
+                            <h2 className="text-xl font-bricolage5 xl:text-2xl">
                                 <Link to="1" className="inline-block text-dark transition hover:text-primary dark:text-light/70 dark:hover:text-primary">
                                     📌 Ko'pchilik yosh dasturchilar beradigan savol: Stack Overflow nima?
                                 </Link>
