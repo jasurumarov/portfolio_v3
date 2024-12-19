@@ -1,16 +1,18 @@
 // Images
-import CompanyImg1 from '../../assets/icons/companies/kindle.jpg'
+// import CompanyImg1 from '../../assets/icons/companies/kindle.jpg'
+import CompanyImg1 from '../../assets/icons/companies/darrov.png'
 import CompanyImg2 from '../../assets/icons/companies/aiko.png'
 import CompanyImg3 from '../../assets/icons/companies/free.png'
 
 const ExperienceData = [
     {
         id: 1,
-        startYear: "2023",
-        endYear: "2024",
+        startYear: "2024",
+        endYear: "Present",
         img: CompanyImg1,
-        name: "Kindle market",
-        desc: "React Frontend Developer"
+        name: "Darrov",
+        desc: "React Frontend Developer",
+        isPresent: true
     },
     {
         id: 2,

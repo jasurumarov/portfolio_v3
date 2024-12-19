@@ -5,8 +5,8 @@ import ExperienceData from './ExperienceData'
 const Experience = () => {
     const experiences = useMemo(() =>
         ExperienceData?.map(experience => (
-            <div key={experience.id} className="flex flex-col items-center gap-1 md:flex-row md:gap-8">
-                <p className="mt-1 text-sm font-bricolage5 text-muted dark:text-light/70">
+            <div key={experience.id} className={`flex flex-col items-start md:items-center gap-1 md:flex-row ${experience.isPresent ? "md:gap-[14px]" : "md:gap-8"}`}>
+                <p className="mt-1 text-nowrap text-sm font-bricolage5 text-muted dark:text-light/70">
                     {experience.startYear} - {experience.endYear}
                 </p>
                 <div className="flex items-center gap-3">
