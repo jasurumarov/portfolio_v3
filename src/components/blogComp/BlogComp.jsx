@@ -19,8 +19,8 @@ const BlogComp = () => {
                     <div className="">
                         <div className="mt-6">
                             <h2 className="text-xl font-bricolage5 xl:text-2xl">
-                                <Link to="2" className="inline-block text-dark transition hover:text-primary dark:text-light/70 dark:hover:text-primary">
-                                    📌 "DARROV" Dashboard: Restoranlar uchun yangi imkoniyatlar
+                                <Link to="2" className="inline-block text-dark transition hover:text-primary dark:text-light dark:hover:text-primary">
+                                    📌 "DARROV" Dashboard
                                 </Link>
                             </h2>
                             <ul className="mt-1 flex flex-wrap items-center gap-2">
@@ -34,7 +34,7 @@ const BlogComp = () => {
                         </div>
                         <div className="mt-6">
                             <h2 className="text-xl font-bricolage5 xl:text-2xl">
-                                <Link to="1" className="inline-block text-dark transition hover:text-primary dark:text-light/70 dark:hover:text-primary">
+                                <Link to="1" className="inline-block text-dark transition hover:text-primary dark:text-light dark:hover:text-primary">
                                     📌 Ko'pchilik yosh dasturchilar beradigan savol: Stack Overflow nima?
                                 </Link>
                             </h2>
