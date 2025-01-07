@@ -89,7 +89,7 @@ const ContactForm = React.memo(() => {
         text += `Message: <b>${formData.message}</b>`
         text += "%0A"
         text += "%0A"
-        text += `<b>Messages from JasurCoder Platform</b>`
+        text += `<b>Messages from JasurCoder Portfolio</b>`
 
         let url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${text}&parse_mode=html`
         let api = new XMLHttpRequest()
